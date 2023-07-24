@@ -58,7 +58,8 @@
 }
 
 .main__controls__button i {
-    font-size: 24px;
+    font-size: 20px;
+    margin-bottom: 6px;
 }
 
 .main__right {
@@ -92,6 +93,7 @@
     background-color: transparent;
     border: none;
     color: #F5F5F5;
+    padding: 10px;
 }
 
 .leave_meeting {
