@@ -11,7 +11,7 @@ const peer = new Peer(undefined, {
 
 let myVideoStream;
 myVideo.muted = true;
-const peers = {}
+const peers = {};
 navigator.mediaDevices
   .getUserMedia({
     video: true,
@@ -47,9 +47,9 @@ navigator.mediaDevices
     });
   });
 
-  socket.on('user-disconnected', userId => {
-    if (peers[userId]) peers[userId].close()
-  })
+socket.on('user-disconnected', (userId) => {
+  if (peers[userId]) peers[userId].close();
+});
 
 peer.on('open', (id) => {
   socket.emit('join-room', ROOM_ID, id);
